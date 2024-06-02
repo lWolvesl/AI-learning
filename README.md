@@ -12,9 +12,7 @@ conda activate pt
 # 安装 pytorch v1.12版本已经正式支持了用于mac m1芯片gpu加速的mps后端
 conda install pytorch::pytorch torchvision torchaudio -c pytorch -y
 
-pip install numpy
-pip install pandas
-pip install matplotlib
+pip install -r requirements
 ```
 
 ## gpt4free

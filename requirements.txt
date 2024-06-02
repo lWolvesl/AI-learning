@@ -4,5 +4,4 @@ torchaudio
 pandas
 matplotlib
 numpy
-g4f
 pillow
