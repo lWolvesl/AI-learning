@@ -1,7 +1,9 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
 
+# 线性回归训练代码
 def compute_error_for_line_given_points(b, w, points):
     totalError = 0
     N = float(len(points))
@@ -35,22 +37,36 @@ def gradient_descent_runner(points, starting_b, starting_w, learningRate, num_it
 
 
 def run():
-    # 修改为生成数据的文件路径
     points_np = np.genfromtxt("data1.csv", delimiter=',').astype(np.float32)
     points = torch.tensor(points_np, device='mps')
-    learning_rate = 0.0001  # 使用较小的学习率
+    learning_rate = 0.0001
     initial_b = 0.0
     initial_w = 0.0
-    num_iterations = 1000
-    print("Starting gradient descent at b={0},w={1},error={2}".format(initial_b, initial_w,
-                                                                      compute_error_for_line_given_points(initial_b,
-                                                                                                          initial_w,
-                                                                                                          points)))
-    print("running...")
+    num_iterations = 100000
     [b, w] = gradient_descent_runner(points, initial_b, initial_w, learning_rate, num_iterations)
     print("After gradient descent at b={0},w={1},error={2}".format(b.item(), w.item(),
                                                                    compute_error_for_line_given_points(b, w, points)))
+    return b.item(), w.item()
 
 
-if __name__ == '__main__':
-    run()
+# 运行线性回归
+final_b, final_w = run()
+
+# 绘制图像
+points_np = np.genfromtxt("data1.csv", delimiter=',').astype(np.float32)
+x = points_np[:, 0]
+y = points_np[:, 1]
+
+x_range = np.linspace(min(x), max(x), 100)
+y_pred = final_w * x_range + final_b
+
+plt.figure(figsize=(8, 6))
+plt.scatter(x, y, color='blue', label='Original data')
+plt.plot(x_range, y_pred, color='red', label='Fitted line')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Fitting a line to random data')
+plt.legend()
+plt.grid(True)
+plt.savefig('print1.png')
+plt.show()

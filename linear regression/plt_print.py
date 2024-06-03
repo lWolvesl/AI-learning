@@ -3,12 +3,13 @@ import matplotlib.pyplot as plt
 
 # 原始数据
 points = np.genfromtxt("data1.csv", delimiter=',')
+
 x = points[:, 0]
 y = points[:, 1]
 
 # 拟合直线
 x_range = np.linspace(min(x), max(x), 100)
-y_pred = 1.6455038785934448 * x_range + 1.827562689781189
+y_pred = 0.3880246877670288 * x_range + 1.7214288711547852
 
 # 绘图
 plt.figure(figsize=(8, 6))
