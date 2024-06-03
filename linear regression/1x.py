@@ -42,7 +42,7 @@ def run():
     learning_rate = 0.0001
     initial_b = 0.0
     initial_w = 0.0
-    num_iterations = 100000
+    num_iterations = 5000
     [b, w] = gradient_descent_runner(points, initial_b, initial_w, learning_rate, num_iterations)
     print("After gradient descent at b={0},w={1},error={2}".format(b.item(), w.item(),
                                                                    compute_error_for_line_given_points(b, w, points)))

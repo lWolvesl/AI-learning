@@ -1,7 +1,4 @@
-pytorch::pytorch
-torchvision
-torchaudio
-pandas
-matplotlib
 numpy
+pandas
 pillow
+matplotlib
