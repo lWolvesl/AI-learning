@@ -39,7 +39,7 @@ def gradient_descent_runner(points, starting_b, starting_w, learningRate, num_it
 
 def run():
     points_np = np.genfromtxt("data1.csv", delimiter=',').astype(np.float32)
-    points = torch.tensor(points_np, device='cuda:5')
+    points = torch.tensor(points_np, device='cuda')
     learning_rate = 0.0001
     initial_b = 0.0
     initial_w = 0.0
