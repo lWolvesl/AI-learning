@@ -30,3 +30,18 @@ pip install jupyter
 ```shell
 jupyter notebook
 ```
+
+## tensorflow
+### python
+```shell
+# win and linux
+pip install tensorflow
+```
+
+```shell
+#mac apple silicon
+pip install tensorflow-macos
+pip install tensorflow-metal
+```
+
+### c++
