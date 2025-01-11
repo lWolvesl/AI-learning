@@ -3,5 +3,5 @@ pandas
 pillow
 matplotlib
 ipywidgets
-tensorflow
 jupyter
+scikit-learn
