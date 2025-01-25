@@ -1,5 +1,7 @@
 # AI-Learning
 
+- 所有的ipynb结果均为最优保存
+
 ## BASE ENV
 
 ## MAC
