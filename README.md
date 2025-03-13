@@ -30,3 +30,7 @@ pip install tensorflow
 pip install -r requirements.txt
 ```
 
+## 安装graphviz - 绘制模型图
+```shell
+brew install graphviz
+```
