@@ -12,7 +12,7 @@ conda activate ail
 conda install pytorch::pytorch torchvision torchaudio -c pytorch -y
 
 # tensorflow mac apple silicon
-pip install tensorflow-macos
+pip install tensorflow-macos==2.15.0
 pip install tensorflow-metal
 
 pip install -r requirements.txt
