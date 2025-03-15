@@ -20,13 +20,26 @@ pip install -r requirements.txt
 
 ## linux
 ```shell
-conda create -n ail-tf python=3.9 -y
+conda create -n ail-tf python=3.10 -y
 conda create -n ail-pt python=3.10 -y
 
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 # tensorflow 需要cudnn支持
 pip install tensorflow
 
+pip install -r requirements.txt
+```
+
+## windows
+```shell
+conda create -n ail-tf python=3.9 -y
+conda create -n ail-pt python=3.9 -y
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+# tf需要安装 CUDA 和 cuDNN
+conda install cudatoolkit=11.8 cudnn=8.9 -c nvidia -y
+
+pip install tensorflow
 pip install -r requirements.txt
 ```
 
